@@ -7,10 +7,10 @@ using System.Data.SqlClient;
 
 namespace QLyTiemChung
 {
-    internal class Connection
+    public class Connection
     {
-        private static string stringConnection = @"Data Source=VIETPHAM\SQLEXPRESS;Initial Catalog=VaccinationSys;Integrated Security=True";
-        public static SqlConnection GetSqlConnection()
+        public static string stringConnection = @"Data Source=VIETPHAM\SQLEXPRESS;Initial Catalog=VaccinationSys;Integrated Security=True";
+        public static  SqlConnection GetSqlConnection()
         {
             return new SqlConnection(stringConnection);
         }

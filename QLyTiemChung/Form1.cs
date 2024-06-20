@@ -33,25 +33,6 @@ namespace QLyTiemChung
             childForm.Show();
         }
 
-        private void btnNV_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnQLTC_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new KhachHang());
-        }
-
-        private void btnQLT_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnBC_Click(object sender, EventArgs e)
-        {
-
-        }
 
         internal void OpenChildForm(PhieuKham phieuKham)
         {
@@ -69,5 +50,35 @@ namespace QLyTiemChung
             phieuKham.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TrangChu());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No);
+            Application.Exit();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new KhachHang());
+        }
+
+        private void panel_Body_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PhieuTP());   
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThongKe());
+        }
     }
 }
